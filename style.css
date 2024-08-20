@@ -1,0 +1,88 @@
+* {
+  font-family: "Victor Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+/* Victor Mono Fonts */
+.victor-bold {
+  font-weight: 900;
+}
+.victor-light {
+  font-weight: 300;
+}
+/* Rowdie Fonts */
+.rowdies-light {
+  font-family: "Rowdies", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.rowdies-regular {
+  font-family: "Rowdies", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.rowdies-bold {
+  font-family: "Rowdies", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 3rem;
+}
+
+.form {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.form > div {
+  display: flex; 
+  flex-flow: row nowrap;
+  align-items: start;
+}
+
+.form > div > input {
+  flex: 3 0;
+}
+
+.form > div > label {
+  flex: 1 0;
+}
+
+.button-wrapper {
+  margin: 20px 0px;
+  display: flex;
+  column-gap: 10px;
+}
+
+.button-wrapper > input[type="button"] {
+  padding: 10px;
+  background-color: darkslategray;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+#generate:hover {
+  background-color: lightgreen;
+  color: black;
+}
+
+#clear:hover {
+  background-color: lightpink;
+  color: black;
+}
