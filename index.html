@@ -10,23 +10,31 @@
   <title>JavaScript Table</title>
 </head>
 <body>
-  <h1 class="rowdies-bold">The Create-a-Table-o-Matic</h1>
-  <form class="form">
-    <h2 class="victor-bold">What size table do you want?</h2>
-    <div class="input-wrapper">
-      <label for="columns">Column(s)</label>
-      <input type="text" name="columns" id="columns">
-    </div>
-    <div class="times">X</div>
-    <div class="input-wrapper">
-      <label for="row">Row(s)</label>
-      <input type="text" name="rows" id="rows">
-    </div>
-    <div class="button-wrapper">
-      <input id="generate" type="button" value="Generate">
-      <input id="clear" type="button" value="Clear">
-    </div>
-  </form>
+  <!-- Create Table instructions and form -->
+  <div id="content">
+    <h1 class="rowdies-bold">The Create-a-Table-o-Matic</h1>
+    <form class="form">
+      <h2 class="victor-bold">What size table do you want?</h2>
+      <div class="input-wrapper">
+        <label for="columns">Column(s)</label>
+        <input type="text" name="columns" id="columns">
+      </div>
+      <div class="times">X</div>
+      <div class="input-wrapper">
+        <label for="row">Row(s)</label>
+        <input type="text" name="rows" id="rows">
+      </div>
+      <div class="button-wrapper">
+        <input id="generate" type="button" value="Generate">
+        <input id="clear" type="button" value="Clear">
+      </div>
+    </form>
+  </div>
+
+  <!-- HTML table is created within the 'canvas' div -->
+  <div id="canvas"></div>
+
+
   <!-- External JavaScript file that creates HTML Table -->
   <script src="index.js"></script>
 </body>

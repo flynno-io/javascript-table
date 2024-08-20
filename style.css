@@ -14,6 +14,19 @@ body {
   justify-content: center;
 }
 
+#content {
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+#canvas {
+  flex: 0 0 70%;
+}
+
 h1, h2 {
   text-align: center;
 }
