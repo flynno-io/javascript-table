@@ -7,10 +7,10 @@ const table = document.getElementById("table")
 
 // Handle form submission
 tableForm.addEventListener("submit", (e) => {
-	e.preventDefault()
-
-	// Get the button type ('generate' or 'clear')
-	const button = e.submitter.getAttribute("id")
+  e.preventDefault()
+  
+  // Get the button type ('generate' or 'clear')
+  const button = e.submitter.getAttribute("id")
 
 	// Clear the form and table
 	if (button === "clear") {
