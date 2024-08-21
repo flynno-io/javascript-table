@@ -13,53 +13,31 @@
   <!-- Create Table instructions and form -->
   <div id="content">
     <h1 class="rowdies-bold">The Create-a-Table-o-Matic</h1>
-    <form class="form">
+    <form id="tableForm" class="form">
       <h2 class="victor-bold">What size table do you want?</h2>
       <div class="input-wrapper">
         <label for="columns">Column(s)</label>
-        <input type="text" name="columns" id="columns">
+        <input type="number" name="columns" id="columns" max="15" required>
       </div>
       <div class="times">X</div>
       <div class="input-wrapper">
-        <label for="row">Row(s)</label>
-        <input type="text" name="rows" id="rows">
+        <label for="rows">Row(s)</label>
+        <input type="number" name="rows" id="rows" max="15" required>
       </div>
       <div class="button-wrapper">
-        <input id="generate" type="button" value="Generate">
-        <input id="clear" type="button" value="Clear">
+        <input id="generate" type="submit" value="Generate">
+        <input id="clear" type="submit" value="Clear">
       </div>
     </form>
   </div>
 
   <!-- HTML table is created within the 'canvas' div -->
-  <div id="canvas"></div>
+  <div id="canvas">
+    <table id="table"></table>
+  </div>
 
 
   <!-- External JavaScript file that creates HTML Table -->
   <script src="index.js"></script>
 </body>
 </html>
-<!-- 
-<table>
-  <tr>
-    <td>1</td>
-    <td>2</td>
-    <td>3</td>
-    <td>4</td>
-    <td>5</td>
-  </tr>
-  <tr>
-    <td>6</td>
-    <td>7</td>
-    <td>8</td>
-    <td>9</td>
-    <td>10</td>
-  </tr>
-  <tr>
-    <td>11</td>
-    <td>12</td>
-    <td>13</td>
-    <td>14</td>
-    <td>15</td>
-  </tr>
-</table> -->
