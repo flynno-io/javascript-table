@@ -4,6 +4,14 @@ const columnsInput = document.getElementsByName("columns")
 const rowsInput = document.getElementsByName("rows")
 const canvas = document.getElementById("canvas")
 const table = document.getElementById("table")
+const clearBtn = document.getElementById("clear")
+
+// Add action to 'clear' button
+clearBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  resetTool()
+  console.log("tool reset successful")
+})
 
 // Handle form submission
 tableForm.addEventListener("submit", (e) => {
