@@ -7,22 +7,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <title>JavaScript Table</title>
+  <title>Create-a-Table-o-Matic</title>
 </head>
 <body>
-  <!-- Create Table instructions and form -->
+  
+  <!-- Table Generator form -->
   <div id="content">
     <h1 class="rowdies-bold">The Create-a-Table-o-Matic</h1>
     <form id="tableForm" class="form">
       <h2 class="victor-bold">What size table do you want?</h2>
       <div class="input-wrapper">
         <label for="columns">Column(s)</label>
-        <input type="number" name="columns" id="columns" max="15" required>
+        <input type="number" name="columns" id="columns" max="15" placeholder="Max of 15" required>
       </div>
       <div class="times">X</div>
       <div class="input-wrapper">
         <label for="rows">Row(s)</label>
-        <input type="number" name="rows" id="rows" max="15" required>
+        <input type="number" name="rows" id="rows" max="15" placeholder="Max of 15" required>
       </div>
       <div class="button-wrapper">
         <input id="generate" type="submit" value="Generate">
