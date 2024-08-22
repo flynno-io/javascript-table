@@ -16,18 +16,19 @@ clearBtn.addEventListener('click', (e) => {
 // Handle form submission
 tableForm.addEventListener("submit", (e) => {
   e.preventDefault()
-  
+
   // Get the button type ('generate' or 'clear')
   const button = e.submitter.getAttribute("id")
 
-	// Clear the form and table
-	if (button === "clear") {
+  // Clear the form and table
+  if (button === "clear") {
     resetTool()
-		console.log("tool reset successful")
-	}
-  
-  // Generate a table form form inputs
+    console.log("tool reset successful")
+  }
+
+  // Generate a table from form inputs
   if (button === 'generate') {
+
     // Get column and row values
     columns = columnsInput[0].value
     rows = rowsInput[0].value
@@ -36,11 +37,11 @@ tableForm.addEventListener("submit", (e) => {
     resetTool()
 
     // Randomly select an index to color yellow
-    
+
     // Generate the table
     makeTable(columns, rows)
     console.log('table generation successful')
-    
+
     // Randomly color a single cell
     colorRandomCell()
 
@@ -56,8 +57,8 @@ function makeTable(columns, rows) {
   let iterator = 1
 
   // Create the table
-	for (let i = 0; i < rows; i++) {
-    
+  for (let i = 0; i < rows; i++) {
+
     // Create the row(s)
     let tr = document.createElement("tr")
     for (let i = 0; i < columns; i++) {
@@ -81,8 +82,7 @@ function resetFormFields() {
 }
 
 function resetTool() {
-  rowsInput[0].value = ""
-  columnsInput[0].value = ""
+  resetFormFields()
   table.replaceChildren()
 }
 
@@ -94,7 +94,7 @@ function getRandomInt(min, max) {
 
 function colorRandomCell() {
   const cells = document.querySelectorAll('td')
-  const index = getRandomInt(1, columns * rows )
+  const index = getRandomInt(1, columns * rows)
 
   cells[index].classList.add("yellow")
 }
