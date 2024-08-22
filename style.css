@@ -1,134 +1,135 @@
 :root {
-  --random-index: 1;
+	--random-index: 1;
 }
 
 * {
-  font-family: "Victor Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
+	font-family: "Victor Mono", monospace;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
 }
 
 body {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
 }
 
 #content {
-  flex: 0 0 30%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
+	flex: 0 0 30%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
 }
 
 #canvas {
-  flex: 0 0 70%;
-  border-top: 1px solid black;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
+	flex: 0 0 70%;
+	border-top: 1px solid black;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
 }
 
-h1, h2 {
-  text-align: center;
+h1,
+h2 {
+	text-align: center;
 }
 
 /* Victor Mono Fonts */
 .victor-bold {
-  font-weight: 900;
+	font-weight: 900;
 }
 .victor-light {
-  font-weight: 300;
+	font-weight: 300;
 }
 /* Rowdie Fonts */
 .rowdies-light {
-  font-family: "Rowdies", sans-serif;
-  font-weight: 300;
-  font-style: normal;
+	font-family: "Rowdies", sans-serif;
+	font-weight: 300;
+	font-style: normal;
 }
 .rowdies-regular {
-  font-family: "Rowdies", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+	font-family: "Rowdies", sans-serif;
+	font-weight: 400;
+	font-style: normal;
 }
 .rowdies-bold {
-  font-family: "Rowdies", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 3rem;
+	font-family: "Rowdies", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 3rem;
 }
 
 .form {
-  display: flex;
-  flex-flow: column nowrap;
+	display: flex;
+	flex-flow: column nowrap;
 }
 
 .form > div {
-  display: flex; 
-  flex-flow: row nowrap;
-  align-items: start;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: start;
 }
 
 .form > div > input {
-  flex: 3 0;
+	flex: 3 0;
 }
 
 .form > div > label {
-  flex: 1 0;
+	flex: 1 0;
 }
 
 .button-wrapper {
-  margin: 20px 0px;
-  display: flex;
-  column-gap: 10px;
+	margin: 20px 0px;
+	display: flex;
+	column-gap: 10px;
 }
 
 .button-wrapper > input[type="button"],
 .button-wrapper > input[type="submit"] {
-  padding: 10px;
-  background-color: darkslategray;
-  color: white;
-  border: none;
-  border-radius: 2px;
-  cursor: pointer;
+	padding: 10px;
+	background-color: darkslategray;
+	color: white;
+	border: none;
+	border-radius: 2px;
+	cursor: pointer;
 }
 
 #generate:hover {
-  background-color: lightgreen;
-  color: black;
+	background-color: lightgreen;
+	color: black;
 }
 
 #clear:hover {
-  background-color: lightpink;
-  color: black;
+	background-color: lightpink;
+	color: black;
 }
 
 #table {
-  border: 1px double black;
+	border: 1px double black;
 }
 
 #table tr td {
-  min-width: 50px;
-  border: 1px double black;
-  font-size: 2rem;
-  text-align: center;
+	min-width: 50px;
+	border: 1px double black;
+	font-size: 2rem;
+	text-align: center;
 }
 
 #table tr:nth-of-type(even) {
-  background-color: lightblue;
+	background-color: lightblue;
 }
 
 /* Randomly color one cell yellow */
 
 #table > tr > td.yellow {
-  background-color: yellowgreen;
+	background-color: yellowgreen;
 }
