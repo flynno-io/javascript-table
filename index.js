@@ -2,54 +2,49 @@
 const tableForm = document.getElementById("tableForm")
 const columnsInput = document.getElementsByName("columns")
 const rowsInput = document.getElementsByName("rows")
-const canvas = document.getElementById("canvas")
 const table = document.getElementById("table")
 const clearBtn = document.getElementById("clear")
 
+// Prevent default form submission
+tableForm.addEventListener("submit", (e) => {
+  e.preventDefault()
+})
+
 // Add action to 'clear' button
-clearBtn.addEventListener('click', (e) => {
-  e.preventDefault();
+clearBtn.addEventListener('click', () => {
+
+  // clear the form fields and remove the table (if any)
   resetTool()
+
+  // log successful run to the console
   console.log("tool reset successful")
 })
 
 // Handle form submission
+// NOTE: an event listener on the form is used over the 'generate' button itself
+// in order to leverage the out-of-the-box form field validation such as 'max' and
+// 'required'.
 tableForm.addEventListener("submit", (e) => {
+
+  // Prevent the default submission behavior
   e.preventDefault()
+  
+  // Get column and row values
+  columns = columnsInput[0].value
+  rows = rowsInput[0].value
 
-  // Get the button type ('generate' or 'clear')
-  const button = e.submitter.getAttribute("id")
+  // Reset tool before generating new table
+  resetTool()
 
-  // Clear the form and table
-  if (button === "clear") {
-    resetTool()
-    console.log("tool reset successful")
-  }
+  // Generate an HTML table from form inputs
+  makeTable(columns, rows)
+  console.log('table generation successful')
 
-  // Generate a table from form inputs
-  if (button === 'generate') {
+  // Randomly color a single cell to yellow
+  colorRandomCell()
 
-    // Get column and row values
-    columns = columnsInput[0].value
-    rows = rowsInput[0].value
-
-    // Reset tool before generating new table
-    resetTool()
-
-    // Randomly select an index to color yellow
-
-    // Generate the table
-    makeTable(columns, rows)
-    console.log('table generation successful')
-
-    // Randomly color a single cell
-    colorRandomCell()
-
-
-    // reset form fields
-    resetFormFields()
-
-  }
+  // reset form fields
+  resetFormFields()
 })
 
 function makeTable(columns, rows) {
